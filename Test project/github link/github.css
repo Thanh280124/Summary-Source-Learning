@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+/* Center the outer container */
+.github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center the grid inside the container */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    gap: 3.5rem;
+    padding: 1rem 3rem;
+    margin-bottom: 200px;
+    max-width:1500px;  
+    width: 100%;
+    justify-content: center; 
+}
+
+.box{
+
+border-radius: 10px;
+text-align: center;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.image{
+    height: 60%;
+    font-size: 20px;
+    width: 90%;
+    border-radius: 5px;
+}
+.title{
+    font-size: 35px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 25px;
+}
