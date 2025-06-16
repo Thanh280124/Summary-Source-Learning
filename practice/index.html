@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        font-size: 30px;
+    }
+    p{
+        font-size: 30px;
+        color: black;
+       
+    }
+    .btn1{
+        font-style: italic;
+    }  
+    .underline {
+    text-decoration: underline;
+  }
+    
+</style>
+<body>
+    <input type="text" class="in1">
+    <input type="text" class="in2">
+    <button class="btn1">
+        ABC
+    </button>
+
+    <button class="btn2">
+        abc
+    </button>
+    <p class="p"></p>
+</body>
+<script>
+    const in1 = document.querySelector('.in1')
+    const in2 = document.querySelector('.in2')
+    const p = document.querySelector('.p')
+    const btn1 = document.querySelector('.btn1')
+     const btn2 = document.querySelector('.btn2')
+
+    in1.addEventListener('input', () => {
+    in2.value = in1.value;
+     p.textContent = in1.value
+  });
+
+  btn1.addEventListener('click',() =>{
+    p.style.fontStyle = 'italic';
+  
+  })
+
+  btn2.addEventListener('click',() =>{
+     p.classList.add('underline');
+  })
+    
+     
+</script>
+</html>
