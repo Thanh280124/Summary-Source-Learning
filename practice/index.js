@@ -1,32 +1,11 @@
-var search = function(nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
-
-    while (left <= right) {
-        let mid = Math.floor((left + right) / 2);
-        
-        if (nums[mid] === target) return mid;
-
-        // Left half is sorted
-        if (nums[left] <= nums[mid]) {
-            if (target >= nums[left] && target < nums[mid]) {
-                right = mid - 1;
-            } else {
-                left = mid + 1;
-            }
-        } 
-        // Right half is sorted
-        else {
-            if (target > nums[mid] && target <= nums[right]) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
+var reverseBits = function(n) {
+    let result = 0;
+    for (let i = 0; i < 32; i++) {
+        result <<= 1; // Shift result to the left by 1
+        result |= (n & 1); // Get the last bit of n and add it to result
+        n >>= 1; // Shift n to the right by 1
     }
-
-    return -1;
+    return result >>> 0; // Convert to unsigned integer
+    
 };
 
-
-console.log(search([6, 7, 0, 1, 2, 4, 5],6));
